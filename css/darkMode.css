@@ -1,4 +1,4 @@
-input[type=checkbox]{
+input[type=checkbox] {
   height: 0;
   width: 0;
   visibility: hidden;
@@ -16,7 +16,7 @@ label {
   left: -50px;
 }
 
-label::after{
+label::after {
   content: '';
   position: absolute;
   top: 3px;

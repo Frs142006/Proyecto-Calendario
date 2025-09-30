@@ -1,31 +1,15 @@
-html{
-
-
-  --body-color:#FFFCFF ;
-
-  --header-color:#d36c6c;
-
-  --header-button:#92a1d1;
-
+html {
+  --body-color: #FFFCFF;
+  --header-color: #d36c6c;
+  --header-button: #92a1d1;
   --color-weekdays: #247BA0;
-  
   --box-shadow: #CBD4C2;
-
   --hover: #e8faed;
-
-  --current-day:#e8f4fa;
-
+  --current-day: #e8f4fa;
   --event-color: #58bae4;
-
   --modal-event: #e8f4fa;
-
-
- --color-day:white;
-  
-
+  --color-day: white;
 }
-
-
 
 body {
   display: flex;
@@ -33,6 +17,7 @@ body {
   justify-content: center;
   background-color: var(--body-color);
 }
+
 button {
   width: 75px;
   cursor: pointer;
@@ -46,33 +31,39 @@ button {
 
 #header {
   padding: 10px;
-  color: var(--header-color) ;
+  color: var(--header-color);
   font-size: 26px;
   font-family: sans-serif;
   display: flex;
   justify-content: space-between;
 }
+
 #header button {
-  background-color:var(--header-button);
+  background-color: var(--header-button);
 }
+
 #container {
   width: 770px;
 }
+
 #weekdays {
   width: 100%;
   display: flex;
-  color: var(--color-weekdays) ;
+  color: var(--color-weekdays);
 }
+
 #weekdays div {
   width: 100px;
   padding: 10px;
 }
+
 #calendar {
   width: 100%;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
 }
+
 .day {
   width: 100px;
   padding: 10px;
@@ -87,13 +78,15 @@ button {
   justify-content: space-between;
   border-radius: 15%;
 }
+
 .day:hover {
   background-color: var(--hover);
 }
 
 .day + #currentDay {
-  background-color:var(--current-day);
+  background-color: var(--current-day);
 }
+
 .event {
   font-size: 10px;
   padding: 3px;
@@ -103,11 +96,13 @@ button {
   max-height: 55px;
   overflow: hidden;
 }
+
 .padding {
   cursor: default !important;
   background-color: var(--body-color) !important;
   box-shadow: none !important;
 }
+
 #newEventModal, #deleteEventModal {
   display: none;
   z-index: 20;
@@ -121,6 +116,7 @@ button {
   position: absolute;
   font-family: sans-serif;
 }
+
 #eventTitleInput {
   padding: 10px;
   width: 100%;
@@ -131,18 +127,23 @@ button {
   border: none;
   box-shadow: 0px 0px 3px gray;
 }
+
 #eventTitleInput.error {
   border: 2px solid red;
 }
+
 #cancelButton, #deleteButton {
   background-color: var(--header-color);
 }
+
 #saveButton, #closeButton {
   background-color: var(--header-button);
 }
+
 #eventText {
   font-size: 14px;
 }
+
 #modalBackDrop {
   display: none;
   top: 0px;
@@ -154,3 +155,40 @@ button {
   background-color: rgba(0,0,0,0.8);
 }
 
+.star {
+  font-size: 36px;
+  cursor: pointer;
+  color: #ccc;
+  margin-bottom: 10px;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.star.active {
+  color: #f1c40f;
+}
+
+.event {
+  font-size: 12px;
+  padding: 3px 5px;
+  margin-top: 3px;
+  border-radius: 8px;
+  color: white;
+  display: inline-block;
+  max-width: 90px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.eventView {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+  padding: 5px 10px;
+  border-radius: 8px;
+  background-color: #58bae4;
+  color: white;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
